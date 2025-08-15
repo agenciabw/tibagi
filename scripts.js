@@ -1,66 +1,62 @@
-/*
-  scripts.js
-  - Toggle do menu mobile
-  - Validação simples do formulário (client-side)
-  - Ano automático no rodapé
-*/
+// script.js
 
-// Toggle do menu no mobile
+// Alterna o menu mobile (hamburger)
 const navToggle = document.querySelector('.nav-toggle');
-const siteNav   = document.querySelector('.site-nav');
+const mainNav = document.querySelector('.main-nav');
 
-if (navToggle && siteNav) {
+if (navToggle) {
   navToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('open');
+    const isOpen = mainNav.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  // Fechar menu ao clicar em um link
-  siteNav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      siteNav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
   });
 }
 
-// Validação simples do formulário
+// Fecha o menu ao clicar nos links (em mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (mainNav.classList.contains('open')) {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Ano no rodapé
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Validação simples do formulário e fallback para mailto
 const form = document.getElementById('contactForm');
+const feedback = document.getElementById('formFeedback');
+
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    // Campos
-    const nome = form.nome;
-    const email = form.email;
-    const mensagem = form.mensagem;
 
-    // Reset de erros
-    form.querySelectorAll('.error').forEach(el => el.textContent = '');
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+    const msg = form.mensagem.value.trim();
 
-    let ok = true;
-    if (!nome.value.trim()) {
-      nome.nextElementSibling.textContent = 'Informe seu nome.';
-      ok = false;
+    // Validação mínima
+    if (!nome || !email || !msg) {
+      feedback.style.color = '#ef4444';
+      feedback.textContent = 'Por favor, preencha todos os campos obrigatórios.';
+      return;
     }
-    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-      email.nextElementSibling.textContent = 'Informe um e-mail válido.';
-      ok = false;
-    }
-    if (!mensagem.value.trim()) {
-      mensagem.nextElementSibling.textContent = 'Digite sua mensagem.';
-      ok = false;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      feedback.style.color = '#ef4444';
+      feedback.textContent = 'Informe um e-mail válido.';
+      return;
     }
 
-    if (ok) {
-      // Simulação de envio — aqui você pode integrar com um backend ou serviço de forms
-      alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-      form.reset();
-    }
+    // Enviar via mailto como fallback (sem backend)
+    const subject = encodeURIComponent('Contato via site Tibagi');
+    const body = encodeURIComponent(`Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${msg}`);
+    window.location.href = `mailto:henrique@martibagi.com.br?subject=${subject}&body=${body}`;
+
+    // Feedback visual
+    feedback.style.color = '#22c55e';
+    feedback.textContent = 'Abrindo seu cliente de e-mail para envio...';
+    form.reset();
   });
-}
-
-// Ano automático no rodapé
-const yearEl = document.getElementById('year');
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
 }
