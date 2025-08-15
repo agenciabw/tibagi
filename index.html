@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados essenciais -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paranaguá Marítima - Agência especializada em operações portuárias no Porto de Paranaguá, Paraná - Brasil." />
+  <title>Paranaguá Marítima | Agência Portuária</title>
+
+  <!-- Conexão ao CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tipografia web segura e performance: usamos system fonts no CSS -->
+</head>
+<body>
+  <!-- HEADER FIXO COM LOGO E MENU DE ÂNCORAS -->
+  <header id="topo" class="site-header">
+    <div class="container header-inner">
+      <!-- Logo fictício com ícone SVG simples -->
+      <a href="#inicio" class="logo" aria-label="Paranaguá Marítima - Início">
+        <!-- Ícone SVG (âncora náutica estilizada) -->
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4m-1 5h2v6h2.5a3.5 3.5 0 0 0 3.5-3.5h2A5.5 5.5 0 0 1 15.5 15H13v4.92A8.01 8.01 0 0 0 20 12h2a10 10 0 0 1-10 10S2 21.05 2 12h2a8.01 8.01 0 0 0 7 7.92V15h-2.5A5.5 5.5 0 0 1 3 9.5h2A3.5 3.5 0 0 0 8.5 13H11z"/>
+        </svg>
+        <span class="logo-text">Paranaguá Marítima</span>
+      </a>
+
+      <!-- Botão mobile (hambúrguer) -->
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <!-- Navegação principal com âncoras -->
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#porto">Porto</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / INÍCIO -->
+  <section id="inicio" class="hero" role="region" aria-label="Seção de destaque - Início">
+    <div class="container hero-inner">
+      <h1>Excelência em operações portuárias no Porto de Paranaguá</h1>
+      <p>Agenciamento de navios, despacho aduaneiro, logística integrada e apoio marítimo com segurança, previsibilidade e performance.</p>
+      <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+    </div>
+    <!-- Efeito visual de fundo é aplicado via CSS -->
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section id="sobre" class="section" role="region" aria-label="Sobre nós">
+    <div class="container grid-2">
+      <div>
+        <h2>Sobre Nós</h2>
+        <p>
+          A Paranaguá Marítima é uma agência localizada em Paranaguá, Paraná – Brasil, dedicada a soluções portuárias de ponta a ponta no <strong>Porto de Paranaguá</strong>. Com atuação integrada junto aos terminais, OGMO, armadores e autoridades, garantimos fluidez operacional, compliance e visibilidade em tempo real.
+        </p>
+        <p>
+          Nossa equipe combina experiência prática de cais, conhecimento regulatório e tecnologia para otimizar escala, atracação, carregamento e desatracação. A localização estratégica no Corredor de Exportação e a proximidade dos principais acessos rodoviários e ferroviários permitem lead times competitivos e redução de custos.
+        </p>
+        <p>
+          Atuamos com foco em governança, segurança operacional e sustentabilidade, suportando cargas a granel, contêineres, veículos e carga geral, respeitando normas ISPS Code e boas práticas internacionais.
+        </p>
+      </div>
+      <div class="card highlight">
+        <h3>Diferenciais</h3>
+        <ul class="checklist">
+          <li>Atuação 24/7 com coordenação operacional onsite e remota.</li>
+          <li>Compliance aduaneiro e documental com SLAs claros.</li>
+          <li>Planejamento de janelas e berços orientado por dados.</li>
+          <li>Parcerias com terminais e operadores para maximizar produtividade.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSSOS SERVIÇOS -->
+  <section id="servicos" class="section bg-light" role="region" aria-label="Nossos serviços">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+
+      <div class="services-grid">
+        <!-- Serviço 1 -->
+        <article class="service-card">
+          <h3>Agenciamento de Navios</h3>
+          <p>Atendimento completo a navios de carga e apoio, incluindo pré-chegada, coordenação de manobras, formalidades com a autoridade portuária, práticos e rebocadores, além de suprimentos e tripulação.</p>
+        </article>
+
+        <!-- Serviço 2 -->
+        <article class="service-card">
+          <h3>Despacho Aduaneiro</h3>
+          <p>Gestão documental e aduaneira para importação e exportação, com enquadramento fiscal, licenças, regimes especiais e integração com intervenientes para reduzir tempos de ciclo.</p>
+        </article>
+
+        <!-- Serviço 3 -->
+        <article class="service-card">
+          <h3>Logística Integrada</h3>
+          <p>Sincronização port-to-door com operadores logísticos, armazéns, transporte rodoviário e ferroviário, assegurando rastreabilidade, controle de avarias e KPIs operacionais.</p>
+        </article>
+
+        <!-- Serviço 4 -->
+        <article class="service-card">
+          <h3>Operações de Carga e Descarga</h3>
+          <p>Planejamento de estiva, balanceamento de porões, monitoramento de produtividade de guindastes e esteiras, e mitigação de paradas por clima e janelas de maré.</p>
+        </article>
+
+        <!-- Serviço 5 -->
+        <article class="service-card">
+          <h3>Apoio Marítimo</h3>
+          <p>Coordenação de rebocadores, lanchas de apoio, suprimentos e serviços de manutenção emergencial, com foco em segurança e disponibilidade operacional.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTO DE PARANAGUÁ -->
+  <section id="porto" class="section" role="region" aria-label="Porto de Paranaguá">
+    <div class="container grid-2">
+      <div>
+        <h2>Porto de Paranaguá</h2>
+        <p>
+          Um dos maiores complexos portuários da América Latina, com vocação multicargas e forte presença em exportações de <strong>grãos</strong>, <strong>contêineres</strong> e <strong>veículos</strong>. Reconhecido pela eficiência e pela inteligência logística, o Porto de Paranaguá bateu recordes recentes de movimentação.
+        </p>
+        <p>
+          Destaques anuais: em <strong>2023</strong>, a Portos do Paraná registrou <strong>65.393.256 toneladas</strong> movimentadas (recorde histórico à época). Em <strong>2024</strong>, houve novo recorde, totalizando <strong>66.769.001 toneladas</strong>, mesmo com aumento de dias chuvosos, evidenciando evolução operacional.
+        </p>
+        <p class="small">
+          Fontes oficiais: 
+          <a href="https://www.portosdoparana.pr.gov.br/Noticia/Portos-do-Parana-ultrapassa-65-milhoes-de-toneladas-movimentadas-em-2023" target="_blank" rel="noopener">Portos do Paraná (2023)</a> e 
+          <a href="https://www.portosdoparana.pr.gov.br/Noticia/Porto-de-Paranagua-mostra-eficiencia-e-bate-recorde-de-movimentacao-em-2024" target="_blank" rel="noopener">Portos do Paraná (2024)</a>.
+        </p>
+      </div>
+      <div class="card highlight">
+        <h3>Indicadores-chave</h3>
+        <ul class="checklist">
+          <li>Perfil multicargas: grãos, açúcar a granel, contêineres, fertilizantes, derivados de petróleo e veículos.</li>
+          <li>Investimentos em calado, dragagem e derrocagem elevaram eficiência e segurança na atracação.</li>
+          <li>Planejamento estratégico e governança suportam crescimento sustentado.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA MULTIMÍDIA -->
+  <section id="galeria" class="section bg-light" role="region" aria-label="Galeria Multimídia - Operações Portuárias">
+    <div class="container">
+      <h2>Operações Portuárias</h2>
+      <p>Veja exemplos de imagens e vídeos de operações no Porto. Substitua os placeholders abaixo por links reais que você tiver autorização para usar.</p>
+
+      <!-- Grade de mídia com miniaturas e legendas -->
+      <div class="gallery-grid">
+        <!-- Imagem 1 -->
+        <figure class="gallery-item">
+          <a class="thumb" href="#" aria-label="Abrir imagem em tamanho maior">
+            <!-- Substitua background-image via CSS inline se quiser apontar para uma URL real -->
+            <!-- Exemplo de imagem real:
+            style="background-image:url('https://www.portosdoparana.pr.gov.br/sites/default/arquivos_restritos/files/imagem/2024-01/porto-paranagua-foto-exemplo.jpg')"
+            -->
+          </a>
+          <figcaption>Atracação de navio cargueiro</figcaption>
+        </figure>
+
+        <!-- Imagem 2 -->
+        <figure class="gallery-item">
+          <a class="thumb" href="#" aria-label="Abrir imagem em tamanho maior"></a>
+          <figcaption>Operação de guindastes no cais</figcaption>
+        </figure>
+
+        <!-- Imagem 3 -->
+        <figure class="gallery-item">
+          <a class="thumb" href="#" aria-label="Abrir imagem em tamanho maior"></a>
+          <figcaption>Rebocadores em manobra</figcaption>
+        </figure>
+
+        <!-- Vídeo 1 (YouTube) -->
+        <figure class="gallery-item video">
+          <!-- Para incorporar um vídeo real do Porto de Paranaguá:
+          <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="Porto de Paranaguá em operação" frameborder="0" allowfullscreen></iframe>
+          -->
+          <div class="video-placeholder">
+            <span>Vídeo 1 – Porto de Paranaguá em operação</span>
+          </div>
+          <figcaption>Movimentação no cais e operações simultâneas</figcaption>
+        </figure>
+
+        <!-- Vídeo 2 (YouTube) -->
+        <figure class="gallery-item video">
+          <!-- Exemplo:
+          <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="Cargas e movimentação de navios" frameborder="0" allowfullscreen></iframe>
+          -->
+          <div class="video-placeholder">
+            <span>Vídeo 2 – Cargas e movimentação de navios</span>
+          </div>
+          <figcaption>Carregamento e descarga com janelas otimizadas</figcaption>
+        </figure>
+      </div>
+
+      <!-- Bloco de fontes para obtenção de mídia real -->
+      <div class="sources">
+        <p class="small">
+          Fontes oficiais de mídia e informações:
+          <a href="https://www.portosdoparana.pr.gov.br/" target="_blank" rel="noopener">Portos do Paraná (site oficial)</a>,
+          <a href="https://www.portosdoparana.pr.gov.br/Noticia/Portos-do-Parana-ultrapassa-65-milhoes-de-toneladas-movimentadas-em-2023" target="_blank" rel="noopener">Recorde 2023</a>,
+          <a href="https://www.portosdoparana.pr.gov.br/Noticia/Porto-de-Paranagua-mostra-eficiencia-e-bate-recorde-de-movimentacao-em-2024" target="_blank" rel="noopener">Recorde 2024</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section" role="region" aria-label="Contato">
+    <div class="container grid-2">
+      <!-- Formulário de contato -->
+      <div>
+        <h2>Fale com a Paranaguá Marítima</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@empresa.com" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Atendimento</h3>
+          <p><strong>Telefone:</strong> (41) 3000-0000</p>
+          <p><strong>E-mail:</strong> <a href="mailto:contato@paranaguamaritima.com">contato@paranaguamaritima.com</a></p>
+          <!-- Botão de WhatsApp: substitua o href com seu link real (ex.: https://wa.me/554100000000) -->
+          <a class="btn btn-outline" href="#" title="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Mapa incorporado -->
+      <div>
+        <h3>Localização — Paranaguá, PR</h3>
+        <!-- Para incorporar um mapa, cole aqui o código de incorporação do Google Maps ou outro provedor autorizado.
+             Exemplo (substitua pelo seu embed oficial):
+             <iframe src="URL_DO_EMBED_DO_MAPA" width="100%" height="320" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de Paranaguá"></iframe>
+        -->
+        <div class="map-placeholder" aria-label="Mapa de Paranaguá">Mapa incorporado aqui</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER COM ANIMAÇÃO DE ONDAS -->
+  <footer class="site-footer">
+    <div class="waves" aria-hidden="true">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Paranaguá Marítima</strong>
+        <span>Operações Portuárias | Paranaguá - PR</span>
+      </div>
+      <div class="footer-social">
+        <!-- Substitua os hrefs pelos perfis reais -->
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+      <div class="footer-copy">
+        <small>© <span id="year"></span> Paranaguá Marítima. Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>
